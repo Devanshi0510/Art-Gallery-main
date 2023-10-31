@@ -1,0 +1,103 @@
+header {
+  text-align: center;
+  // padding: 20px 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  // padding: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #242222;
+  border-radius: 4px;
+  margin-left: 11.5rem;
+}
+
+input[type="submit"] {
+  background-color: #c1bcbc;
+  ;
+  color: #363636;
+  padding: 10px 20px;
+  border: 1px solid #c1bcbc;
+  ;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #c1bcbc;
+  ;
+}
+
+.main {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f2eaea;
+}
+
+
+@media screen and (max-width:600px) {
+
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+
+    color: #f2eaea;
+  }
+
+  input[type=text][_ngcontent-ng-c396933340] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #242222;
+    border-radius: 4px;
+    margin-left: 3.5rem;
+  }
+
+
+}

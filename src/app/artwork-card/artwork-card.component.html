@@ -1,0 +1,10 @@
+<ng-container *ngIf="artworkData">
+    <div class="card"><a [routerLink]="['/artwork-detail', artworkData.data.id]">
+      <img class="card-img-top" *ngIf="artworkData.data.image_id" [src]="'https://www.artic.edu/iiif/2/'+ artworkData.data.image_id+'/full/843,/0/default.jpg' " alt="{{ artworkData.data.title }}"></a>
+      <div class="card body">
+        <h3 class="card-title">Title:{{ artworkData.data.title | slice:0:10}}</h3>
+        <h4 class="card-text">Author: {{ artworkData.data.artist_title | slice:0:15 }}</h4>
+        <button href="#" class="btn btn-primary" (click)="addtoFav(artworkData.data)" >Favourite</button>
+      </div>
+    </div>
+  </ng-container>

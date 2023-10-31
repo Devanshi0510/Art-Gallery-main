@@ -1,0 +1,81 @@
+
+<app-search-bar></app-search-bar>
+
+
+
+<div *ngIf="finalArtworks">
+  <h2 class="collection">Our Collection</h2>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let artwork of finalArtworks | slice: paginator.pageIndex * paginator.pageSize:(paginator.pageIndex+1)*paginator.pageSize">
+      <ng-container *ngIf="artwork">
+        <div class="card">
+          <img class="card-img-top" [routerLink]="['/artwork-detail', artwork.id]" *ngIf="artwork.image_id" [src]="'https://www.artic.edu/iiif/2/'+ artwork.image_id+'/full/843,/0/default.jpg' " alt="{{ artwork.title }}">
+          <div class="card body">
+            <h3 class="card-title">Title:{{ artwork.title | slice:0:10}}</h3>
+            <h4 class="card-text">Author: {{ artwork.artist_title | slice:0:15 }}</h4>
+            <button href="#" class="btn btn-primary" (click)="addtoFav(artwork)" >Favourite</button>
+            <a  [routerLink]="['/artwork-detail', artwork.id]">
+            <button href="#" class="btn btn-primary" >View Detail</button></a>
+          </div>
+        </div>
+      </ng-container>
+    </div> 
+  </div>
+
+  <mat-paginator #paginator [length]="finalArtworks.length"
+    [pageSize]="10"
+    [pageSizeOptions]="[4, 8,20,40,100]">
+  </mat-paginator>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="centered-element">
+<h1 class="head1">ABOUT US</h1>
+<div class="two-columns">
+    <h2>OUR HISTORY</h2>
+    <p>Founded in 1879, the Art Institute of Chicago is one of the world’s major museums, housing an extraordinary collection of objects from across places, cultures, and time. We are also a place of active learning for all—dedicated to investigation, innovation, education, and dialogue—continually aspiring to greater public service and civic engagement.The Art Institute of Chicago is located on the traditional unceded homelands of the Council of the Three Fires: the Ojibwe, Odawa, and Potawatomi Nations. Many other tribes. The region has long been a center for Indigenous people to gather, trade, and maintain kinship ties. Today, one of the largest urban American Indian communities in the United States resides in Chicago. 
+</p>
+    <h2>OUR MISSION</h2>
+    <p>The Art Institute of Chicago shares its singular collections with our city and the world. We collect, care for, and interpret works of art across time, cultures, geographies, and identities, centering the vision of artists and makers. We recognize that all art is made in a particular context, demanding continual, dynamic reconsideration in the present. We are a place of gathering; we foster the exchange of ideas and inspire an expansive, inclusive understanding of human creativity. 
+        Home to a collection of art that spans centuries and the globe, the Art Institute of Chicago is located in the heart of the city—and is one of Tripadvisor’s “Best of the Best” US attractions of 2023.</p>
+  </div>
+  <h1 class="head2">LEADERSHIP</h1>
+  <P>In my nearly 30 years at the Art Institute, seven as its president and director, I have been guided by the fundamental conviction that works of art carry unique, often transformative powers.
+
+    As a primary, tangible record of human creativity, art transmits our thoughts, beliefs, values, and abilities. It structures the ways in which we see and understand the world. A direct interaction with an artwork can reassure, energize, teach, and challenge us—intellectually and emotionally. It can serve as a catalyst for connection and exchange, for expanding our understanding of our collective past, present, and future.
+    
+    As one of the world’s leading art museums, the Art Institute of Chicago offers exactly these opportunities.  We serve as a site both restorative and invigorating, encouraging solitary encounters with individual objects while also fostering collective experiences and growing communities.
+    <br>
+    <br>
+  </P>
+  <p style="float: right;"> —James Rondeau
+    President and Eloise W. Martin Director</p>
+</div>
+
+
+
+
+

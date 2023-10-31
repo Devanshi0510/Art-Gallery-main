@@ -1,0 +1,12 @@
+<div class="row">
+<div class="col-sm-3" *ngFor="let artwork of object.values(favData)">
+    <div class="card">
+      <img class="card-img-top" *ngIf="artwork.image_id" [src]="'https://www.artic.edu/iiif/2/'+ artwork.image_id+'/full/843,/0/default.jpg'" alt="{{ artwork.title }}">
+      <div class="card-body">
+        <h3 class="card-title">Title: {{ artwork.title | slice:0:10 }}</h3>
+        <h4 class="card-text">Author: {{ artwork.artist_title | slice:0:15 }}</h4>
+        <button href="#" class="btn btn-primary" (click)="removeFromFav(artwork.id)">Remove from Favourite</button>
+      </div>
+    </div>
+  </div>
+</div>

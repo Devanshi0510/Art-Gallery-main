@@ -1,0 +1,45 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .bag-img {
+    background-image: url("https://wallpapers.com/images/high/history-background-91lrdxrxih9q9tdy.webp");
+    background-size: cover;
+    position: relative;
+    height:30rem; /* adjust to your needs */
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @mixin side{
+    float: right;
+    font-size: large;
+  
+  }
+
+ .left1{
+  @include side();
+  padding-left: 2rem;
+
+ } 
+ .left2{
+  @include side();
+  margin-left: 40rem;
+ } 
+.visit{
+  @include side();
+}
+ img{
+  width: 4rem;
+  height: 4rem;
+ }
+
+ 
+img:hover {
+  transform: scale(1.5); 
+}

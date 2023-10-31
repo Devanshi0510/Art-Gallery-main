@@ -1,0 +1,11 @@
+<div *ngIf="finalArtworks">
+  <h2>Search results:</h2>
+  <div class="row">
+  <div class="col-sm-3" *ngFor="let artwork of finalArtworks">
+    <app-artwork-card [artworkData]="artwork" ></app-artwork-card>
+    </div> 
+  </div>
+</div>
+
+
+

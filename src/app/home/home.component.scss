@@ -1,0 +1,100 @@
+.two-columns {
+    column-count: 2;
+    column-gap: 2rem;
+  }  
+
+  @mixin heading{
+    
+    font-size: 40px;
+    font-family: 'Baskerville', serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 40px;
+  }
+  .head1 {
+    @include heading();
+    margin-top: 1rem;
+    margin-left: 19.5rem;
+  }
+  .head2 {
+    @include heading();
+    margin-top: 3rem;
+    margin-left: 17.5rem;
+  }
+h2{
+    font-family: 'Baskerville', serif;
+    padding-left: 9rem;
+}
+p{
+    font-family: 'Baskerville', serif;
+text-align: justify;
+}
+
+  .centered-element {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+.card{
+    display: flex;
+    padding: 1rem;
+}
+img{
+    height: 16rem;
+}
+.collection{
+  @include heading();
+  margin-top: 1rem;
+  margin-left: 12.5rem;
+}
+
+
+@media screen and (max-width:600px) {
+
+  .collection[_ngcontent-ng-c2891250264] {
+  font-size: 25px;
+  font-family: "Baskerville", serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  margin-top: 1rem;
+  margin-left: -4.5rem;
+  text-align: center;
+}
+
+.head1[_ngcontent-ng-c2891250264] {
+  font-size: 28px;
+  font-family: "Baskerville", serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+.two-columns[_ngcontent-ng-c2891250264] {
+  column-count: 1;
+  column-gap: 2rem;
+}
+h2[_ngcontent-ng-c2891250264] {
+  font-family: "Baskerville", serif;
+  padding-left: 4rem;
+}
+
+.head2[_ngcontent-ng-c2891250264] {
+  font-size: 31px;
+  font-family: "Baskerville", serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  margin-top: 3rem;
+  margin-left: 0.5rem;
+}
+
+}
+

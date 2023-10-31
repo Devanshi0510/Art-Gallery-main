@@ -1,0 +1,15 @@
+<div class="container" *ngIf="Data">
+    <div class="row">
+      <div class="col-md-6">
+        <img *ngIf="Data.image_id" [src]="'https://www.artic.edu/iiif/2/'+ Data.image_id+'/full/843,/0/default.jpg'" alt="{{ Data.title }}">
+      </div>
+      <div class="col-md-6">
+        <h2>Title: {{ Data.title }}</h2>
+        <h3>Author: {{ Data.artist_title}}</h3>
+        <h3>Description:</h3><span [innerHTML]="Data.description"></span>
+        <button class="btn btn-primary"  (click)="addtoFav(Data)" >Add to Favourite</button>
+      </div>
+    </div>
+  </div>
+
+
