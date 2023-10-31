@@ -7,15 +7,15 @@
   <h2 class="collection">Our Collection</h2>
   <div class="row">
     <div class="col-sm-3" *ngFor="let artwork of finalArtworks | slice: paginator.pageIndex * paginator.pageSize:(paginator.pageIndex+1)*paginator.pageSize">
+      
       <ng-container *ngIf="artwork">
-        <div class="card">
-          <img class="card-img-top" [routerLink]="['/artwork-detail', artwork.id]" *ngIf="artwork.image_id" [src]="'https://www.artic.edu/iiif/2/'+ artwork.image_id+'/full/843,/0/default.jpg' " alt="{{ artwork.title }}">
+      
+        <div class="card">  <a [routerLink]="['/artwork-detail', artwork.id]" >
+          <div><img class="card-img-top" *ngIf="artwork.image_id" [src]="'https://www.artic.edu/iiif/2/'+ artwork.image_id+'/full/843,/0/default.jpg' " alt="{{ artwork.title }}"></div></a>
           <div class="card body">
             <h3 class="card-title">Title:{{ artwork.title | slice:0:10}}</h3>
             <h4 class="card-text">Author: {{ artwork.artist_title | slice:0:15 }}</h4>
             <button href="#" class="btn btn-primary" (click)="addtoFav(artwork)" >Favourite</button>
-            <a  [routerLink]="['/artwork-detail', artwork.id]">
-            <button href="#" class="btn btn-primary" >View Detail</button></a>
           </div>
         </div>
       </ng-container>
